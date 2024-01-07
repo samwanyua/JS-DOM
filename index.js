@@ -5,111 +5,112 @@
  * 
  * 
  */
+
 //Examine Document Object
-// console.dir(document)//all properties and objects attached to document obeject
+console.dir(document)//all properties and objects attached to document obeject
 
-// console.log(document.domain)//to access domain name
+console.log(document.domain)//to access domain name
 
-// console.log(document.URL)
+console.log(document.URL)
 
-// console.log(document.title)
+console.log(document.title)
 
-// //document.title = Youtube;
+//document.title = Youtube;
 
-// console.log(document.head)
+console.log(document.head)
 
-// console.log(document.all)
+console.log(document.all)
 
-// console.log(document.all[12]);
+console.log(document.all[12]);
 
-// //document.all[12].textContent = 'Hello';
+//document.all[12].textContent = 'Hello';
 
-// console.log(document.forms) //to get all the forms
+console.log(document.forms) //to get all the forms
 
-// console.log(document.links)// to get all links
+console.log(document.links)// to get all links
 
-// console.log(document.images)// to get all images
+console.log(document.images)// to get all images
 
 /*Selectors*/
 //GETELEMENTBYID//
-// console.log(document.getElementById('header-title'));
+console.log(document.getElementById('header-title'));
 
-// const main = document.getElementById('main');
-// console.log(main);
+const main = document.getElementById('main');
+console.log(main);
 
-// let headerTitle = document.getElementById('header-title');
-// headerTitle.textContent = 'Item List'; //Disregard the styling
-// // headerTitle.innerText = 'Item Listed';//Pays attention to styling
+let headerTitle = document.getElementById('header-title');
+headerTitle.textContent = 'Item List'; //Disregard the styling
+// headerTitle.innerText = 'Item Listed';//Pays attention to styling
 
-// // headerTitle.innerHTML = '<h3>Hello</h3>'
-
-
-// headerTitle.style.borderBottom = 'solid 2px #000'
-// headerTitle.style.marginBottom = '3px';
-
-// //GETELEMENTSBYCLASSNAME// -> notice the plural 'elements'
-
-// let itemsList = document.getElementsByClassName('list-group-item');
-// console.log(itemsList);
-// console.log(itemsList[2]); //accessing individual elements
-// itemsList[2].textContent = 'Hello 2'; //Modifying
-// itemsList[2].style.backgroundColor = 'yellow';
+// headerTitle.innerHTML = '<h3>Hello</h3>'
 
 
-// for(i=0; i < itemsList.length; i++){
-//     itemsList[i].style.backgroundColor = 'green';
-// }
+headerTitle.style.borderBottom = 'solid 2px #000'
+headerTitle.style.marginBottom = '3px';
 
-// //GETELEMENTBYTAGNAME//
-// let li = document.getElementsByClassName('list-group-item');
-// console.log(li)
-// li[2].textContent = 'Hello kjh';
+//GETELEMENTSBYCLASSNAME// -> notice the plural 'elements'
 
-
-// for(i=0; i < li.length; i++){
-//     li[i].style.backgroundColor = 'blue';
-// }
-
-// //QUERYSELECTOR// -> Picks only one selector
-
-// let header = document.querySelector('#main-header');
-// console.log(header);
-// header.style.borderBottom = 'solid 4px blue';
-
-// const input = document.querySelector('input');
-// console.log(input);
-// input.value = 'Hello World';
+let itemsList = document.getElementsByClassName('list-group-item');
+console.log(itemsList);
+console.log(itemsList[2]); //accessing individual elements
+itemsList[2].textContent = 'Hello 2'; //Modifying
+itemsList[2].style.backgroundColor = 'yellow';
 
 
-// const submit = document.querySelector('input[type="submit"]');
-// submit.value = 'Send';
+for(i=0; i < itemsList.length; i++){
+    itemsList[i].style.backgroundColor = 'green';
+}
 
-// const item = document.querySelector('.list-group-item');
-// item.style.color = 'red'; //get the first one
-
-
-// const lastItem = document.querySelector('.list-group-item:last-child');
-// lastItem.style.color = 'green'; //get the last one
-
-
-// const secondItem = document.querySelector('.list-group-item:nth-child(2)');
-// secondItem.style.color = 'yellow'; //get the second one
+//GETELEMENTBYTAGNAME//
+let li = document.getElementsByClassName('list-group-item');
+console.log(li)
+li[2].textContent = 'Hello kjh';
 
 
-// //QUERY SELECTOR ALL// -> WORK SIMILAR TO GETELEMENTBYTAGNAME
+for(i=0; i < li.length; i++){
+    li[i].style.backgroundColor = 'blue';
+}
 
-// const titles = document.querySelectorAll('.title');
-// console.log(titles);
+//QUERYSELECTOR// -> Picks only one selector
 
-// titles[0].textContent = 'Yooh';
+let header = document.querySelector('#main-header');
+console.log(header);
+header.style.borderBottom = 'solid 4px blue';
 
-// const odd = document.querySelectorAll('li:nth-child(odd)');
-// const even = document.querySelectorAll('li:nth-child(even)');
+const input = document.querySelector('input');
+console.log(input);
+input.value = 'Hello World';
 
-// for(let  i = 0; i < odd.length; i++){
-//     odd[i].style.backgroundColor = 'indigo';
-//     even[i].style.backgroundColor = 'orange';
-// }
+
+const submit = document.querySelector('input[type="submit"]');
+submit.value = 'Send';
+
+const item = document.querySelector('.list-group-item');
+item.style.color = 'red'; //get the first one
+
+
+const lastItem = document.querySelector('.list-group-item:last-child');
+lastItem.style.color = 'green'; //get the last one
+
+
+const secondItem = document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.color = 'yellow'; //get the second one
+
+
+//QUERY SELECTOR ALL// -> WORK SIMILAR TO GETELEMENTBYTAGNAME
+
+const titles = document.querySelectorAll('.title');
+console.log(titles);
+
+titles[0].textContent = 'Yooh';
+
+const odd = document.querySelectorAll('li:nth-child(odd)');
+const even = document.querySelectorAll('li:nth-child(even)');
+
+for(let  i = 0; i < odd.length; i++){
+    odd[i].style.backgroundColor = 'indigo';
+    even[i].style.backgroundColor = 'orange';
+}
 
 
 
@@ -200,3 +201,67 @@ newDiv.style.fontWeight = 'bold';
  console.log(newDiv);
 
  cont.insertBefore(newDiv, h1);
+
+//Events
+const button = document.getElementById('btton');
+
+
+button.addEventListener('click', (e)=>{
+    console.log('button clicked')
+});
+
+//alternatively -> ideal
+
+const btn = document.getElementById('btton').addEventListener
+('click', buttonClicked);
+
+function buttonClicked(e){
+    // console.log('Clicked');
+    document.getElementById('header-title').textContent = 'Upgraded';
+    document.querySelector('#main').style.backgroundColor = 'blue';
+    console.log(e);
+
+    console.log(e.target); //actual element that was clicked
+
+    console.log(e.target.id); //to get the id
+    console.log(e.target.className); //to get the class
+    console.log(e.target.classList);
+
+    //to output to the DOM
+    const output = document.getElementById('output');
+    output.innerHTML = `<h3> ${e.target.id} </h3>`;
+
+    console.log(e.type);//Tells us the type of event
+    console.log(e.clientX); //Mouse position
+
+    console.log(e.offsetX); //position of mouse on actual element
+    console.log(e.offsetY);
+
+    console.log(e.altkey);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
