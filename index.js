@@ -237,8 +237,33 @@ function buttonClicked(e){
     console.log(e.offsetX); //position of mouse on actual element
     console.log(e.offsetY);
 
-    console.log(e.altkey);
+    // console.log(e.shiftkey);
+    // console.log(e.altkey);
+    // console.log(e.ctrlkey);
 
+}
+
+//mouse events
+
+const btttt = document.getElementById('btton');
+
+// btttt.addEventListener('click', runEvent); //click
+// btttt.addEventListener('dblclick', runEvent); //double click
+// btttt.addEventListener('mousedown', runEvent); //mousedown
+// btttt.addEventListener('mouseup', runEvent);// mouseup
+
+
+const box = document.getElementById('box');
+// box.addEventListener('mouseenter', runEvent); //mouseenter -> for parent element
+box.addEventListener('mouseleave', runEvent);//mouseleave 
+box.addEventListener('mouseover', runEvent);//mouseover -> for inner element
+box.addEventListener('mouseout', runEvent);//mouseout
+box.addEventListener('mousemove', runEvent); //mouse
+
+
+function runEvent(e){
+    console.log('EVENT TYPE:' +e.type);
+    output = '<h3>MouseX</H2'
 }
 
 
