@@ -261,9 +261,38 @@ box.addEventListener('mouseout', runEvent);//mouseout
 box.addEventListener('mousemove', runEvent); //mouse
 
 
+const itemInput = document.querySelector('input[type="text"]'); 
+const form = document.querySelector('form');
+
+
+itemInput.addEventListener('keydown', runEvent); //keydown
+itemInput.addEventListener('keyup', runEvent); //keyup
+itemInput.addEventListener('keypress', runEvent); //keypress
+
+itemInput.addEventListener('cut', runEvent);//cut
+itemInput.addEventListener('paste', runEvent); //paste
+
+itemInput.addEventListener('input', runEvent);//input
+
+itemInput.addEventListener('focus', runEvent); //focus -> when you click in the input button to type something
+itemInput.addEventListener('blur', runEvent); //blur -> when we click outside the input button
+
+const select = document.querySelector('select');
+
+select.addEventListener('change',runEvent);//change
+
+form.addEventListener('submit', runEvent);
+
+
 function runEvent(e){
-    console.log('EVENT TYPE:' +e.type);
-    output = '<h3>MouseX</H2'
+    e.preventDefault();
+    console.log(`'EVENT TYPE:' ${e.type}`);
+    // output.innerHTML = '<h3>MouseX: ' + e.offsetX + '</h3><h3>MouseY: ' + e.offsetY + '</h3>';
+    console.log(e.target.value); // to get the value
+
+    // document.getElementById('output').innerHTML = `<h5>${e.target.value}</h5>`; //to actually post it on the DOM
+
+    // box.style.backgroundColor = "rgb("+e.offsetX","+e.offsetY+",40)"
 }
 
 
